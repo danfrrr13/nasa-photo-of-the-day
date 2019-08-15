@@ -1,11 +1,10 @@
 import React from "react";
+import { Image } from "semantic-ui-react";
 
-const Image = props => {
+const Img = props => {
     return (
-        <div className="imgContainer">
-            <img src={props.img} className="img" />
-        </div>
+        <Image src={props.img} wrapped ui={false} />
     )  
 }
 
-export default Image;
+export default Img;

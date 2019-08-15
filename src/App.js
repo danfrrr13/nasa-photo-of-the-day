@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Title from "./components/title/title.js";
-import Image from "./components/image/image.js";
+import Img from "./components/image/image.js";
 import Explanation from "./components/explanation/explanation.js";
 import axios from "axios";
+import { Card } from 'semantic-ui-react';
 import "./App.css";
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   const [titleData, setTitleData] = useState(' ');
@@ -22,9 +24,16 @@ function App() {
 
   return (
     <div className="container">
-      <Title title={titleData} />
-      <Image img={imgData} />
-      <Explanation explanation={explanationData} />
+      <Card>
+        <Img img={imgData} />
+        <Card.Content>
+          <Title title={titleData} />
+          <Explanation explanation={explanationData} />
+        </Card.Content>
+        <Card.Content extra>
+          Nasa's photo of the day
+        </Card.Content>
+      </Card>
     </div>
   );
 }

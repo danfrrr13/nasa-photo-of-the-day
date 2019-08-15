@@ -1,10 +1,11 @@
 import React from "react";
+import { Card } from "semantic-ui-react";
 
 const Explanation = props => {
     return (
-        <div className="explanation">
-            <p>{props.explanation}</p>
-        </div>
+        <Card.Description>
+            {props.explanation}
+        </Card.Description>
     )  
 }
 
